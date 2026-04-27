@@ -1,0 +1,25 @@
+
+IMPORTANT: Core Python files need to be added manually
+========================================================
+
+This script created the project structure and configuration files.
+
+You still need to add these core files by copying from the artifacts:
+
+1. app.py (main Streamlit application)
+2. backend/document_processor.py
+3. backend/database_manager.py
+4. backend/rag_engine.py
+5. backend/translator.py
+6. utils/config.py
+7. utils/helpers.py
+8. tests/test_system.py
+
+Copy the content from each artifact I provided earlier into these files.
+
+Once added, run:
+    cd ai-summarization-system
+    pip install -r requirements.txt
+    cp .env.example .env
+    # Add your OPENAI_API_KEY to .env
+    streamlit run app.py

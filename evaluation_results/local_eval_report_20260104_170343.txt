@@ -1,0 +1,31 @@
+
+======================================================================
+EVALUATION REPORT - LOCAL OLLAMA
+AI Document Intelligence System
+Generated: 2026-01-04 17:03:43
+======================================================================
+
+📊 RAG PERFORMANCE (Local Ollama)
+----------------------------------------------------------------------
+Total Queries: 3
+Avg Precision@5: 0.000
+Avg Recall@5: 0.000
+Avg MRR: 0.000
+Avg Response Time: 5.01s
+
+🎬 VIDEO SYNTHESIS
+----------------------------------------------------------------------
+Total Tests: 3
+Success Rate: 100.0%
+Avg Generation Time: 16.7s
+Languages: english, hindi, kannada
+
+📥 DOCUMENT INGESTION
+----------------------------------------------------------------------
+Files Tested: 2
+Success Rate: 0.0%
+Avg Processing Time: 0.00s
+
+======================================================================
+✅ LOCAL EVALUATION COMPLETE
+======================================================================

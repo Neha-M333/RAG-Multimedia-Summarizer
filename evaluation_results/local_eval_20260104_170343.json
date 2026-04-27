@@ -1,0 +1,201 @@
+{
+  "rag_performance": {
+    "detailed_results": {
+      "retrieval_metrics": [
+        {
+          "query": "What are the main findings of the report?",
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "retrieval_time": 0.27118730545043945,
+          "num_results": 0
+        },
+        {
+          "query": "When was the project completed?",
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "retrieval_time": 0.036460161209106445,
+          "num_results": 0
+        },
+        {
+          "query": "What is the budget allocation?",
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "retrieval_time": 0.036249637603759766,
+          "num_results": 0
+        }
+      ],
+      "answer_quality": [
+        {
+          "query": "What are the main findings of the report?",
+          "rouge-1-f": 0.0689655122948874,
+          "rouge-1-p": 0.0625,
+          "rouge-1-r": 0.07692307692307693,
+          "rouge-2-f": 0.0,
+          "rouge-l-f": 0.0689655122948874,
+          "semantic_similarity": 0.059313103556632996,
+          "answer_length": 17
+        },
+        {
+          "query": "When was the project completed?",
+          "rouge-1-f": 0.0,
+          "rouge-1-p": 0.0,
+          "rouge-1-r": 0.0,
+          "rouge-2-f": 0.0,
+          "rouge-l-f": 0.0,
+          "semantic_similarity": 0.41315358877182007,
+          "answer_length": 22
+        },
+        {
+          "query": "What is the budget allocation?",
+          "rouge-1-f": 0.0,
+          "rouge-1-p": 0.0,
+          "rouge-1-r": 0.0,
+          "rouge-2-f": 0.0,
+          "rouge-l-f": 0.0,
+          "semantic_similarity": 0.050334230065345764,
+          "answer_length": 19
+        }
+      ],
+      "response_times": [
+        8.206173658370972,
+        3.5514042377471924,
+        3.268420696258545
+      ],
+      "confidence_scores": [
+        "medium",
+        "medium",
+        "medium"
+      ]
+    },
+    "summary": {
+      "avg_precision@5": 0.0,
+      "avg_recall@5": 0.0,
+      "avg_mrr": 0.0,
+      "avg_retrieval_time": 0.11463236808776855,
+      "avg_total_response_time": 5.008666197458903,
+      "total_queries": 3,
+      "avg_rouge_1_f": 0.0229885040982958,
+      "avg_rouge_2_f": 0.0,
+      "avg_rouge_l_f": 0.0229885040982958,
+      "avg_semantic_similarity": 0.17426697413126627
+    }
+  },
+  "video_synthesis": {
+    "detailed_results": {
+      "generation_metrics": [
+        {
+          "language": "english",
+          "success": true,
+          "generation_time": 26.04211974143982,
+          "video_duration": 9.72,
+          "file_size_mb": 0.857086181640625,
+          "quality_score": 100.0,
+          "resolution": [
+            640,
+            480
+          ],
+          "has_subtitles": true
+        },
+        {
+          "language": "hindi",
+          "success": true,
+          "generation_time": 11.810012102127075,
+          "video_duration": 4.75,
+          "file_size_mb": 0.39922618865966797,
+          "quality_score": 100.0,
+          "resolution": [
+            640,
+            480
+          ],
+          "has_subtitles": true
+        },
+        {
+          "language": "kannada",
+          "success": true,
+          "generation_time": 12.285129308700562,
+          "video_duration": 5.3,
+          "file_size_mb": 0.40172863006591797,
+          "quality_score": 100.0,
+          "resolution": [
+            640,
+            480
+          ],
+          "has_subtitles": true
+        }
+      ],
+      "quality_scores": [],
+      "language_support": {
+        "english": [
+          {
+            "success": true,
+            "duration": 9.72
+          }
+        ],
+        "hindi": [
+          {
+            "success": true,
+            "duration": 4.75
+          }
+        ],
+        "kannada": [
+          {
+            "success": true,
+            "duration": 5.3
+          }
+        ]
+      }
+    },
+    "summary": {
+      "total_tests": 3,
+      "success_rate": 1.0,
+      "avg_generation_time": 16.712420384089153,
+      "avg_video_duration": 6.59,
+      "avg_file_size_mb": 0.5526803334554037,
+      "languages_tested": [
+        "english",
+        "hindi",
+        "kannada"
+      ],
+      "language_success_rates": {
+        "english": 1.0,
+        "hindi": 1.0,
+        "kannada": 1.0
+      }
+    }
+  },
+  "multimodal_ingestion": {
+    "detailed_results": {
+      "processing_metrics": [
+        {
+          "file_type": "pdf",
+          "success": false,
+          "error": "Error processing PDF: [Errno 2] No such file or directory: 'test_data/sample.pdf'"
+        },
+        {
+          "file_type": "docx",
+          "success": false,
+          "error": "Unsupported file type: docx"
+        }
+      ],
+      "accuracy_metrics": [],
+      "error_rates": {
+        "pdf": 1,
+        "docx": 1
+      },
+      "processing_times": []
+    },
+    "summary": {
+      "total_files_tested": 2,
+      "success_rate": 0.0,
+      "avg_processing_time": 0,
+      "file_types_tested": 2,
+      "error_rates_by_type": {
+        "pdf": 1,
+        "docx": 1
+      }
+    }
+  }
+}

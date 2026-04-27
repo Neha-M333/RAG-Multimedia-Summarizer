@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  ai-summarization:
+    build: .
+    container_name: ai-summarization-system
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LLM_MODEL=${LLM_MODEL:-gpt-3.5-turbo}
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - ai-network
+
+  # Optional: MongoDB for advanced features
+  # mongodb:
+  #   image: mongo:6.0
+  #   container_name: ai-summarization-mongodb
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongodb_data:/data/db
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=admin
+  #     - MONGO_INITDB_ROOT_PASSWORD=password
+  #   networks:
+  #     - ai-network
+
+networks:
+  ai-network:
+    driver: bridge
+
+volumes:
+  data:
+    driver: local
+  # mongodb_data:
+  #   driver: local
